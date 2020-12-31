@@ -1,56 +1,43 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
+    <!-- Sizes your content based upon application components -->
+    <v-app-bar></v-app-bar>
+    <v-main id="app-main">
+      <!-- Provides the application the proper gutter -->
+      <v-container>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
     </v-main>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
-  components: {
-    HelloWorld
-  },
+  components: {},
 
   data: () => ({
     //
   })
 };
 </script>
+<style>
+body {
+  font-family: "Roboto", sans-serif;
+}
+#app-main {
+  max-width: 70%;
+  margin: 0 auto;
+}
+@media {
+  #app-main {
+    max-width: 100%;
+  }
+}
+</style>

@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-main id="main-wrap">
+    <v-img src="@/assets/logo.jpg" width="100%" id="logo"/>
+    <Menu />
+  </v-main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Menu from "@/components/Menu";
 export default {
-  name: "Home",
+  data: () => ({}),
   components: {
-    HelloWorld
+    Menu
   }
 };
 </script>
+<style scoped>
+#main-wrap {
+}
+#logo {
+    margin: 0 auto;
+}
+</style>
