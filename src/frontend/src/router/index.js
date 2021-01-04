@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/views/Home";
+import Recommend from "@/views/Recommend";
 
 Vue.use(VueRouter);
 
@@ -10,6 +11,11 @@ const routes = [
     name: "Home",
     component: Home
   },
+  {
+    path: "/recommend",
+    name: "Recommend",
+    component: Recommend
+  }
 ];
 
 const router = new VueRouter({
