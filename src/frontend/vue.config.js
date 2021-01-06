@@ -12,11 +12,5 @@ module.exports = {
     },
     port: 4000
   },
-  pwa: {
-    workboxOptions: {
-      skipWaiting: true,
-      clientsClaim: true,
-    }
-  },
   transpileDependencies: ["vuetify"]
 };
