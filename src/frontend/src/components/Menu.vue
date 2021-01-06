@@ -5,9 +5,7 @@
       <li class="menu-list__item" v-for="(menu, index) in menus" :key="index">
         <a href="">
           <figure>
-            <div class="item__img-wrapper">
-              <img :src="menu.imagePath" :class="menu.class" />
-            </div>
+            <img :src="menu.imagePath" :class="menu.class" class="respons" />
             <figcaption>{{ menu.name }}</figcaption>
           </figure>
         </a>
@@ -45,7 +43,7 @@ export default {
 .main h2 {
   color: #f4eee6;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -53,7 +51,7 @@ export default {
 .main__menu-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 30px;
 }
 .menu-list__item {
@@ -79,36 +77,20 @@ export default {
   padding: 25px;
 }
 
-.menu-list__item .item__img-wrapper {
-  position: relative;
-  width: 170px;
-  height: 170px;
-  margin: 0 auto;
-  text-align: center;
-  background: #eed09c;
-  border-radius: 100%;
-}
-
-.menu-list__item img {
-  position: absolute;
-  width: 130px;
-  margin: 0 auto;
-}
-
-.chicken {
-  top: 40px;
-  left: 20px;
-}
-
-.pizza {
-  top: 10px;
-  left: 20px;
-}
-
 .menu-list__item figcaption {
-  margin-top: 30px;
+  margin-top: 15px;
   color: #eed09c;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main { width: 100%;}
+  .main h2 { font-size: 1rem; }
+  .main__menu-list { padding: 0; }
+  .menu-list__item { 
+    width: 150px;
+    height: 200px;
+  }
 }
 </style>
