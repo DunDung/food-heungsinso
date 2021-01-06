@@ -1,46 +1,33 @@
 <template>
   <main class="main">
-      <h2>먹고 싶은 음식의 종류를 선택해주세요!</h2>
-      <ul class="main__menu-list reset-list">
-        <li class="menu-list__item">
-          <a href="">
-            <figure>
-              <div class="item__img-wrapper">
-                <img src="./images/chicken.png" class="chicken" alt>
-              </div>
-              <figcaption>치킨</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li class="menu-list__item">
-          <a href="">
-            <figure>
-              <div class="item__img-wrapper">
-                <img src="./images/pizza.png" class="pizza" alt>
-              </div>
-              <figcaption>피자</figcaption>
-            </figure>
-          </a>
-        </li>
-      </ul>
-    </main>
+    <h2>먹고 싶은 음식의 종류를 선택해주세요!</h2>
+    <ul class="main__menu-list reset-list">
+      <li class="menu-list__item">
+        <a href="">
+          <figure>
+            <div class="item__img-wrapper">
+              <img src="@/assets/images/chicken.png" class="chicken" alt />
+            </div>
+            <figcaption>치킨</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="menu-list__item">
+        <a href="">
+          <figure>
+            <div class="item__img-wrapper">
+              <img src="@/assets/images/pizza.png" class="pizza" alt />
+            </div>
+            <figcaption>피자</figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </main>
 </template>
 <script>
 export default {
-  data: () => ({
-    slides: [
-      {
-        name: "치킨",
-        imageUrl: require("@/assets/chicken.jpg"),
-        title: "치킨은 가슴이 시킨다.",
-      },
-      {
-        name: "피자",
-        imageUrl: require("@/assets/pizza.jpg"),
-        title: "피자를 먹을까 말까의 고민은 배달을 늦출 뿐이다.",
-      }
-    ]
-  }),
+  data: () => ({}),
   components: {}
 };
 </script>
@@ -71,7 +58,7 @@ export default {
   height: 300px;
   background: #0a0426;
   border-radius: 20px;
-  box-shadow: 0 10px 5px rgba(10, 4, 38, .3);
+  box-shadow: 0 10px 5px rgba(10, 4, 38, 0.3);
   margin-bottom: 15px;
 }
 
@@ -106,12 +93,12 @@ export default {
 }
 
 .chicken {
-  top: 40px; 
+  top: 40px;
   left: 20px;
 }
 
 .pizza {
-  top: 10px; 
+  top: 10px;
   left: 20px;
 }
 

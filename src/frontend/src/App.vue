@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <!-- Sizes your content based upon application components -->
-    <v-app-bar></v-app-bar>
     <v-main id="app-main">
       <!-- Provides the application the proper gutter -->
       <v-container>
@@ -68,7 +67,7 @@ body * {
 
 /* 본문 기본 폰트, 글자 크기, 굵기, 배경 색상 지정 */
 body {
-  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-family: "Spoqa Han Sans", "Sans-serif";
   font-size: 1.6rem;
   font-weight: 400;
   background-color: #fff;
@@ -107,22 +106,29 @@ a {
   text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
-ul, ol{
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-input{
+input {
   padding: 0;
   border: 0;
 }
 
-figure{
+figure {
   margin: 0;
 }
 

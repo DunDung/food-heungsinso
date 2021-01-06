@@ -3,46 +3,44 @@
     <div class="app-container">
       <header class="header">
         <h1 class="header__brand-logo">
-          <a href="./index.html"><img src="./images/header_logo.png" alt="음식 흥신소" class="respons" /></a>
+          <img
+            src="@/assets/images/header_logo.png"
+            alt="음식 흥신소"
+            class="respons"
+          />
         </h1>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
           <p>전국 프렌차이즈 메뉴 중 지금 끌리는 메뉴를 찾아드립니다.</p>
         </article>
       </header>
-    <Menu />
+      <Menu />
     </div>
     <!-- footer -->
-    <div class="footer-container">  
+    <div class="footer-container">
       <footer class="footer">
-          <div class="footer__brand-logo">
-            <img src="./images/footer_logo.png" alt="음식 흥신소">
-          </div>
-          <address class="footer__address">
-            <span><b>GITHUB : </b>github.com/DunDung</span>
-            <span class="address__divider" aria-hidden="true">ㅣ</span>
-            <span>github.com/iamkjw77</span>
-          </address>
-          <small class="footer__copyright">&copy; 2021 FOOD HEUNGSINSO COMPANY. ALL RIGHTS RESERVED.</small>
+        <div class="footer__brand-logo">
+          <img src="@/assets/images/footer_logo.png" alt="음식 흥신소" />
+        </div>
+        <address class="footer__address">
+          <span><b>GITHUB : </b>github.com/DunDung</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>github.com/iamkjw77</span>
+        </address>
+        <small class="footer__copyright"
+          >&copy; 2021 FOOD HEUNGSINSO COMPANY. ALL RIGHTS RESERVED.</small
+        >
       </footer>
     </div>
   </v-main>
 </template>
 
 <script>
-import axios from "axios";
 import Menu from "@/components/Menu";
 export default {
   data: () => ({}),
   components: {
     Menu
-  },
-  created() {
-    console.log("created");
-    axios.get("/recommends");
-  },
-  destroyed() {
-    axios.delete("/recommends");
   }
 };
 </script>
@@ -50,7 +48,7 @@ export default {
 /* 레이아웃 */
 .app-container {
   width: 100%;
-  background: linear-gradient(to bottom, #626fbf 1%,#972ae6 100%);
+  background: linear-gradient(to bottom, #626fbf 1%, #972ae6 100%);
 }
 
 /* 헤더 */
@@ -61,7 +59,7 @@ export default {
 }
 
 /* 헤더-로고 */
-.header__brand-logo a{
+.header__brand-logo a {
   display: block;
   width: 100%;
 }
@@ -85,7 +83,7 @@ export default {
 }
 
 /* 푸터 */
-.footer-container{
+.footer-container {
   width: 100%;
   background: #1f1f1f;
 }
@@ -95,7 +93,7 @@ export default {
   margin: 0 auto;
   padding: 30px;
   text-align: center;
-  color: #a7a7a7
+  color: #a7a7a7;
 }
 
 .footer__brand-logo {
