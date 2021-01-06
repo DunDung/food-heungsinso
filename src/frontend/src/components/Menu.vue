@@ -2,23 +2,13 @@
   <main class="main">
     <h2>먹고 싶은 음식의 종류를 선택해주세요!</h2>
     <ul class="main__menu-list reset-list">
-      <li class="menu-list__item">
+      <li class="menu-list__item" v-for="(menu, index) in menus" :key="index">
         <a href="">
           <figure>
             <div class="item__img-wrapper">
-              <img src="@/assets/images/chicken.png" class="chicken" alt />
+              <img :src="menu.imagePath" :class="menu.class" />
             </div>
-            <figcaption>치킨</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="menu-list__item">
-        <a href="">
-          <figure>
-            <div class="item__img-wrapper">
-              <img src="@/assets/images/pizza.png" class="pizza" alt />
-            </div>
-            <figcaption>피자</figcaption>
+            <figcaption>{{ menu.name }}</figcaption>
           </figure>
         </a>
       </li>
@@ -27,7 +17,20 @@
 </template>
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    menus: [
+      {
+        imagePath: require("@/assets/images/chicken.png"),
+        name: "치킨",
+        class: "chicken"
+      },
+      {
+        imagePath: require("@/assets/images/pizza.png"),
+        name: "피자",
+        class: "pizza"
+      }
+    ]
+  }),
   components: {}
 };
 </script>
