@@ -11,7 +11,7 @@
         </h1>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
-          <p>전국 프렌차이즈 메뉴 중 지금 끌리는 메뉴를 찾아드립니다.</p>
+          <p>전국 프렌차이즈 메뉴 중 <br/> 지금 끌리는 메뉴를 찾아드립니다.</p>
         </article>
       </header>
       <Menu />
