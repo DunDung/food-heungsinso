@@ -3,11 +3,9 @@
     <div class="app-container">
       <header class="header">
         <h1 class="header__brand-logo">
-          <img
-            src="@/assets/images/header_logo.png"
-            alt="음식 흥신소"
-            class="respons"
-          />
+          <a href="./index.html">
+            <img class="respons" src="@/assets/images/header_logo.png" alt="음식 흥신소" />
+          </a>
         </h1>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
@@ -20,7 +18,7 @@
     <div class="footer-container">
       <footer class="footer">
         <div class="footer__brand-logo">
-          <img src="@/assets/images/footer_logo.png" alt="음식 흥신소" />
+          <img class="respons" src="@/assets/images/footer_logo.png" alt="음식 흥신소" />
         </div>
         <address class="footer__address">
           <span><b>GITHUB : </b>github.com/DunDung</span>
@@ -48,7 +46,8 @@ export default {
 /* 레이아웃 */
 .app-container {
   width: 100%;
-  background: linear-gradient(to bottom, #626fbf 1%, #972ae6 100%);
+  background-image: linear-gradient(to bottom, #626fbf 1%, #972ae6 100%);
+  background-size: cover;
 }
 
 /* 헤더 */
@@ -59,6 +58,11 @@ export default {
 }
 
 /* 헤더-로고 */
+.header__brand-logo {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .header__brand-logo a {
   display: block;
   width: 100%;
@@ -66,7 +70,6 @@ export default {
 
 .header__brand-logo img {
   vertical-align: baseline;
-  /* width: 450px; */
 }
 
 /* 헤더-슬로건 */
@@ -77,7 +80,7 @@ export default {
   display: block;
   color: #f4eee6;
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   text-align: center;
   line-height: 1.5;
 }
@@ -103,8 +106,13 @@ export default {
 .footer__address,
 .footer__copyright {
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .header, .footer { width: 100%;}
+  .header__slogan p { font-size: 1.2rem; }
 }
 </style>

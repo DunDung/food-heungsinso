@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="base">
     <!-- Sizes your content based upon application components -->
     <v-main id="app-main">
       <!-- Provides the application the proper gutter -->
@@ -27,9 +27,6 @@ export default {
 };
 </script>
 <style>
-/* --------------------------------------------
-  * 기본 스타일 */
-
 /* 셀렉션 스타일 */
 ::-moz-selection {
   /* 파이어폭스를 위한 -moz */
@@ -39,6 +36,14 @@ export default {
 ::selection {
   background: #9131e2;
   color: #ffffff;
+}
+
+#base {
+  font-family: "Spoqa Han Sans", "Sans-serif";
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fff;
+  color: #181818;
 }
 
 /* 루트 요소의 기본 글자크기 설정 */
@@ -63,15 +68,6 @@ body * {
   -webkit-tap-highlight-color: rgba(255, 255, 200, 0.3);
   tap-highlight-color: rgba(255, 255, 200, 0.3);
   /* 터치를 위해 색상을 줌 */
-}
-
-/* 본문 기본 폰트, 글자 크기, 굵기, 배경 색상 지정 */
-body {
-  font-family: "Spoqa Han Sans", "Sans-serif";
-  font-size: 1.6rem;
-  font-weight: 400;
-  background-color: #fff;
-  color: #181818;
 }
 
 /* a 요소 내 이미지에 발생하는 갭 제거 */
