@@ -3,12 +3,12 @@
     <h2>먹고 싶은 음식의 종류를 선택해주세요!</h2>
     <ul class="main__menu-list reset-list">
       <li class="menu-list__item" v-for="(menu, index) in menus" :key="index">
-        <a href="">
+        <router-link :to="'/recommend/' + menu.class">
           <figure>
             <img :src="menu.imagePath" :class="menu.class" class="respons" />
             <figcaption>{{ menu.name }}</figcaption>
           </figure>
-        </a>
+        </router-link>
       </li>
     </ul>
   </main>
@@ -85,10 +85,16 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .main { width: 100%;}
-  .main h2 { font-size: 1rem; }
-  .main__menu-list { padding: 0; }
-  .menu-list__item { 
+  .main {
+    width: 100%;
+  }
+  .main h2 {
+    font-size: 1rem;
+  }
+  .main__menu-list {
+    padding: 0;
+  }
+  .menu-list__item {
     width: 150px;
     height: 200px;
   }

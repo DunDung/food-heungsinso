@@ -12,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/recommend",
+    path: "/recommend/:menuName",
     name: "Recommend",
     component: Recommend
   }
