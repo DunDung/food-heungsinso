@@ -29,7 +29,9 @@
           </li>
         </ul>
       </section>
-      <button class="main__back-btn" type="button">뒤로가기</button>
+      <router-link :to="'/result/'">
+        <button class="main__back-btn" type="button">← 뒤로가기</button>
+      </router-link>
     </main>
   </v-main>
 </template>
