@@ -1,25 +1,20 @@
 <template>
   <v-app id="base">
-    <!-- Sizes your content based upon application components -->
     <v-main id="app-main">
-      <!-- Provides the application the proper gutter -->
       <v-container>
-        <!-- If using vue-router -->
         <router-view></router-view>
+        <Footer />
       </v-container>
     </v-main>
-
-    <v-footer app>
-      <!-- -->
-    </v-footer>
   </v-app>
 </template>
 
 <script>
+import Footer from "@/components/Footer";
 export default {
   name: "App",
 
-  components: {},
+  components: { Footer },
 
   data: () => ({
     //
@@ -49,8 +44,6 @@ export default {
 /* 루트 요소의 기본 글자크기 설정 */
 html {
   font-size: 10px;
-  overflow-y: visible;
-  /* 세로스크롤바 보이게 설정 */
 }
 
 /* 기본 박스사이징 설정 */

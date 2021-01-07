@@ -1,35 +1,27 @@
 <template>
-  <v-main>
+  <v-main class="pa-0">
     <div class="app-container">
       <header class="header">
         <h1 class="header__brand-logo">
           <a href="./index.html">
-            <img class="respons" src="@/assets/images/header_logo.png" alt="음식 흥신소" />
+            <img
+              class="respons"
+              src="@/assets/images/header_logo.png"
+              alt="음식 흥신소"
+            />
           </a>
         </h1>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
-          <p>전국 프렌차이즈 메뉴 중 <br/> 지금 끌리는 메뉴를 찾아드립니다.</p>
+          <p>
+            전국 프렌차이즈 메뉴 중 <br />
+            지금 끌리는 메뉴를 찾아드립니다.
+          </p>
         </article>
       </header>
       <Menu />
     </div>
     <!-- footer -->
-    <div class="footer-container">
-      <footer class="footer">
-        <div class="footer__brand-logo">
-          <img class="respons" src="@/assets/images/footer_logo.png" alt="음식 흥신소" />
-        </div>
-        <address class="footer__address">
-          <span><b>GITHUB : </b>github.com/DunDung</span>
-          <span class="address__divider" aria-hidden="true">ㅣ</span>
-          <span>github.com/iamkjw77</span>
-        </address>
-        <small class="footer__copyright"
-          >&copy; 2021 FOOD HEUNGSINSO COMPANY. ALL RIGHTS RESERVED.</small
-        >
-      </footer>
-    </div>
   </v-main>
 </template>
 
@@ -85,34 +77,12 @@ export default {
   line-height: 1.5;
 }
 
-/* 푸터 */
-.footer-container {
-  width: 100%;
-  background: #1f1f1f;
-}
-
-.footer {
-  width: 550px;
-  margin: 0 auto;
-  padding: 30px;
-  text-align: center;
-  color: #a7a7a7;
-}
-
-.footer__brand-logo {
-  margin-bottom: 20px;
-}
-
-.footer__address,
-.footer__copyright {
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 5px;
-}
-
 @media screen and (max-width: 768px) {
-  .header, .footer { width: 100%;}
-  .header__slogan p { font-size: 1.2rem; }
+  .header {
+    width: 100%;
+  }
+  .header__slogan p {
+    font-size: 1.2rem;
+  }
 }
 </style>
