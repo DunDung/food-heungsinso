@@ -1,10 +1,8 @@
 <template>
   <v-app id="base">
     <v-main id="app-main">
-      <v-container>
-        <router-view></router-view>
-        <Footer />
-      </v-container>
+      <router-view></router-view>
+      <Footer />
     </v-main>
   </v-app>
 </template>
@@ -34,6 +32,7 @@ export default {
 }
 
 #base {
+  background-image: linear-gradient(to bottom, #626fbf 1%, #972ae6 100%);
   font-family: "Spoqa Han Sans", "Sans-serif";
   font-size: 1.6rem;
   font-weight: 400;
