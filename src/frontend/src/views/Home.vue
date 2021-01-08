@@ -39,7 +39,6 @@ export default {
 .app-container {
   width: 100%;
   background-image: linear-gradient(to bottom, #626fbf 1%, #972ae6 100%);
-  background-size: cover;
 }
 
 /* 헤더 */

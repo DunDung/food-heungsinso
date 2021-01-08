@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home";
 import Recommend from "@/views/Recommend";
+import Result from "@/views/Result";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/recommend/:menuName",
     name: "Recommend",
     component: Recommend
+  },
+  {
+    path: "/result/",
+    name: "Result",
+    component: Result
   }
 ];
 
