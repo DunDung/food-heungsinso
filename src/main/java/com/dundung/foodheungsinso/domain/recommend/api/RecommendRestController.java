@@ -1,4 +1,4 @@
-package com.dundung.foodheungsinso.api;
+package com.dundung.foodheungsinso.domain.recommend.api;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
