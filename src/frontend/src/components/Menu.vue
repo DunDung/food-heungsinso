@@ -13,6 +13,7 @@
     </ul>
   </main>
 </template>
+
 <script>
 export default {
   data: () => ({
@@ -32,6 +33,7 @@ export default {
   components: {}
 };
 </script>
+
 <style scoped>
 /* 메인 */
 .main {

@@ -18,7 +18,7 @@ const routes = [
     component: Recommend
   },
   {
-    path: "/result/",
+    path: "/result",
     name: "Result",
     component: Result
   }

@@ -1,12 +1,6 @@
 <template>
   <v-main>
-    <header class="header">
-      <h1 class="header__brand-logo">
-        <a href="./index.html">
-          <img class="respons" src="@/assets/images/small_logo.png" alt="음식 흥신소" />
-        </a>
-      </h1>
-    </header>
+    <SmallLogo />
     <main class="main">
       <section class="main__result">
         <h2 class="a11y-hidden">추천 음식 결과와 소개</h2>
@@ -16,10 +10,16 @@
             <span class="result__bland">BBQ </span>
             <span class="result__menu">황금 올리브</span>
           </figcaption>
-          <img class="respons" src="@/assets/images/bbq_gold_olive.png" alt="bbq 황금올리브 치킨">
+          <img
+            class="respons"
+            src="@/assets/images/bbq_gold_olive.png"
+            alt="bbq 황금올리브 치킨"
+          />
         </figure>
         <p>
-          <span class="result__des">바삭한 식감과 부드럽게 퍼지는 육즙의 향연</span>
+          <span class="result__des"
+            >바삭한 식감과 부드럽게 퍼지는 육즙의 향연</span
+          >
           <span class="result__res">“BBQ 황금 올리브 치킨”</span>을 추천합니다!
         </p>
       </section>
@@ -32,45 +32,30 @@
     </main>
   </v-main>
 </template>
-<script>
 
+<script>
+import SmallLogo from "@/components/SmallLogo";
+
+export default {
+  components: {
+    SmallLogo
+  }
+};
 </script>
+
 <style scoped>
 @font-face {
-  font-family: 'DX상장체B';
-  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format('truetype');
+  font-family: "DX상장체B";
+  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: '상상토끼 정묵바위';
-  src: url(../assets/font/SSRock.ttf) format('truetype');
+  font-family: "상상토끼 정묵바위";
+  src: url(../assets/font/SSRock.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
-}
-
-/* 헤더 */
-.header {
-  width: 550px;
-  margin: 0 auto;
-  padding-top: 30px;
-}
-
-/* 헤더-로고 */
-.header__brand-logo {
-  width: 85%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.header__brand-logo a {
-  display: block;
-  width: 100%;
-}
-
-.header__brand-logo img {
-  vertical-align: baseline;
 }
 
 /* 메인 */
@@ -85,7 +70,7 @@
 .result__title {
   display: block;
   text-align: center;
-  font-family: 'DX상장체B', sans-serif;
+  font-family: "DX상장체B", sans-serif;
   font-size: 4rem;
   color: #a7a7a7;
 }
@@ -96,26 +81,26 @@
 
 .result__bland::before,
 .result__menu::after {
-  content: '“';
+  content: "“";
   color: #000000;
-  font-family: '상상토끼 정묵바위', sans-serif;
+  font-family: "상상토끼 정묵바위", sans-serif;
 }
 
 .result__menu::after {
-  content: '”'
+  content: "”";
 }
 
 .result__bland {
   line-height: 1.1;
   font-size: 5rem;
-  font-family: '상상토끼 정묵바위', sans-serif;
+  font-family: "상상토끼 정묵바위", sans-serif;
   color: #b70000;
 }
 
 .result__menu {
   line-height: 1.1;
   font-size: 4rem;
-  font-family: '상상토끼 정묵바위', sans-serif;
+  font-family: "상상토끼 정묵바위", sans-serif;
   color: #e9b412;
 }
 
@@ -127,7 +112,7 @@
 }
 
 .main__result p {
-  font-family: 'DX상장체B', sans-serif;
+  font-family: "DX상장체B", sans-serif;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
@@ -159,7 +144,7 @@
 
 .btn-list__back-btn {
   background: #b73de6;
-} 
+}
 
 .btn-list__back-btn:hover {
   border: 2px solid violet;
@@ -174,16 +159,31 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header, .main {
+  .main {
     width: 100%;
   }
-  
-  .result__title { font-size: 3rem; }
-  .result__bland { font-size: 2.7rem; }
-  .result__menu { font-size: 2rem; }
-  .main__result img { width: 250px; }
-  .main__result p { font-size: 1.1rem; }
-  .result__res { font-size: 1.5rem}
-  .btn-list__back-btn, .btn-list__replay-btn { width: 140px;}
+
+  .result__title {
+    font-size: 3rem;
+  }
+  .result__bland {
+    font-size: 2.7rem;
+  }
+  .result__menu {
+    font-size: 2rem;
+  }
+  .main__result img {
+    width: 250px;
+  }
+  .main__result p {
+    font-size: 1.1rem;
+  }
+  .result__res {
+    font-size: 1.5rem;
+  }
+  .btn-list__back-btn,
+  .btn-list__replay-btn {
+    width: 140px;
+  }
 }
 </style>

@@ -19,6 +19,7 @@
     </footer>
   </div>
 </template>
+
 <style scoped>
 .footer-container {
   width: 100%;

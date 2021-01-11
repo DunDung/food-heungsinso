@@ -1,17 +1,15 @@
 <template>
   <v-main>
-    <header class="header">
-      <h1 class="header__brand-logo">
-        <a href="./index.html">
-          <img class="respons" src="@/assets/images/small_logo.png" alt="음식 흥신소" />
-        </a>
-      </h1>
-    </header>
+    <SmallLogo />
     <main class="main">
       <section class="main__progress-bar">
         <h2 class="a11y-hidden">진행 단계</h2>
         <div class="progress-bar__line"></div>
-        <img class="progress-bar__step" src="@/assets/images/tray.png" alt="지금의 단계" />
+        <img
+          class="progress-bar__step"
+          src="@/assets/images/tray.png"
+          alt="지금의 단계"
+        />
       </section>
       <section class="main__question-answer">
         <h2 class="a11y-hidden">추천음식을 위한 질문과 답변</h2>
@@ -29,52 +27,35 @@
           </li>
         </ul>
       </section>
-      <router-link :to="'/result/'">
+      <router-link :to="'/result'">
         <button class="main__back-btn" type="button">← 뒤로가기</button>
       </router-link>
     </main>
   </v-main>
 </template>
+
 <script>
+import SmallLogo from "@/components/SmallLogo";
 export default {
-  data() {
-    return { menuName: "" };
-  },
+  data: () => ({
+    menuName: ""
+  }),
   mounted() {
     this.menuName = this.$route.params.menuName;
+  },
+  components: {
+    SmallLogo
   }
 };
 </script>
+
 <style scoped>
 /* 웹 폰트 */
 @font-face {
-  font-family: 'DX상장체B';
-  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format('truetype');
+  font-family: "DX상장체B";
+  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
-}
-
-/* 헤더 */
-.header {
-  width: 550px;
-  margin: 0 auto;
-  padding-top: 30px;
-}
-
-/* 헤더-로고 */
-.header__brand-logo {
-  width: 85%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.header__brand-logo a {
-  display: block;
-  width: 100%;
-}
-
-.header__brand-logo img {
-  vertical-align: baseline;
 }
 
 /* 메인 */
@@ -111,7 +92,7 @@ export default {
 .question-answer__question {
   text-align: center;
   font-size: 4rem;
-  font-family: 'DX상장체B', sans-serif;
+  font-family: "DX상장체B", sans-serif;
 }
 
 .question-answer__answer {
@@ -159,14 +140,14 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .header, .main {
+  .main {
     width: 100%;
   }
-  
+
   .main__progress-bar {
     width: 220px;
   }
-  
+
   .question-answer__question {
     font-size: 2.7rem;
   }

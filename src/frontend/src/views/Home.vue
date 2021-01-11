@@ -3,13 +3,11 @@
     <div class="app-container">
       <header class="header">
         <h1 class="header__brand-logo">
-          <a href="./index.html">
-            <img
-              class="respons"
-              src="@/assets/images/header_logo.png"
-              alt="음식 흥신소"
-            />
-          </a>
+          <img
+            class="respons"
+            src="@/assets/images/header_logo.png"
+            alt="음식 흥신소"
+          />
         </h1>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
@@ -34,6 +32,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 /* 레이아웃 */
 .app-container {
