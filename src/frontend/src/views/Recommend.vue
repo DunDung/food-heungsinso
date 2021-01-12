@@ -13,38 +13,60 @@
       </section>
       <section class="main__question-answer">
         <h2 class="a11y-hidden">추천음식을 위한 질문과 답변</h2>
-        <p class="question-answer__question">바삭한게 땡긴다.</p>
+        <p class="question-answer__question">{{ question.content }}</p>
         <ul class="question-answer__answer">
           <li>
-            <a href="#">
-              <img class="respons" src="@/assets/images/no.png" alt="no" />
+            <a @click="answerYes">
+              <img class="respons" src="@/assets/images/yes.png" alt="yes" />
             </a>
           </li>
           <li>
-            <a href="">
-              <img class="respons" src="@/assets/images/yes.png" alt="yes" />
+            <a>
+              <img class="respons" src="@/assets/images/no.png" alt="no" />
             </a>
           </li>
         </ul>
       </section>
-      <router-link :to="'/result'">
-        <button class="main__back-btn" type="button">← 뒤로가기</button>
-      </router-link>
     </main>
   </v-main>
 </template>
 
 <script>
 import SmallLogo from "@/components/SmallLogo";
+import axios from "axios";
 export default {
   data: () => ({
-    menuName: ""
+    requestUri: "/recommends/",
+    question: {
+      content: ""
+    }
   }),
   mounted() {
-    this.menuName = this.$route.params.menuName;
+    this.requestUri += this.$route.params.menuName;
+    axios.get(this.requestUri).then(res => (this.question = res.data));
   },
   components: {
     SmallLogo
+  },
+  methods: {
+    answerYes() {
+      axios.get(this.requestUri + "/yes").then(res => {
+        if (this.isResult(res)) {
+          this.$router.push({
+            name: "Result",
+            params: { result: res.data },
+            props: true
+          });
+        }
+        this.question = res.data;
+      });
+    },
+    isResult(response) {
+      if (response.data.name) {
+        return true;
+      }
+      return false;
+    }
   }
 };
 </script>
@@ -53,7 +75,7 @@ export default {
 /* 웹 폰트 */
 @font-face {
   font-family: "DX상장체B";
-  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
+  src: url(../assets/fonts/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }

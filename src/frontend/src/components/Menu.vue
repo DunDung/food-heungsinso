@@ -5,7 +5,7 @@
       <li class="menu-list__item" v-for="(menu, index) in menus" :key="index">
         <router-link :to="'/recommend/' + menu.class">
           <figure>
-            <img :src="menu.imagePath" :class="menu.class" class="respons" />
+            <img :src="menu.imagePath" class="respons" />
             <figcaption>{{ menu.name }}</figcaption>
           </figure>
         </router-link>
@@ -21,12 +21,12 @@ export default {
       {
         imagePath: require("@/assets/images/chicken.png"),
         name: "치킨",
-        class: "chicken"
+        class: "chickens"
       },
       {
         imagePath: require("@/assets/images/pizza.png"),
         name: "피자",
-        class: "pizza"
+        class: "pizzas"
       }
     ]
   }),

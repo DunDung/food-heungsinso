@@ -23,7 +23,6 @@
       </header>
       <Menu />
     </div>
-    <!-- footer -->
   </v-main>
 </template>
 

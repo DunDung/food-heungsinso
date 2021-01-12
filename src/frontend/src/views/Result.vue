@@ -6,25 +6,25 @@
         <h2 class="a11y-hidden">추천 음식 결과와 소개</h2>
         <figure>
           <figcaption>
-            <span class="result__title">후라이드의 왕</span>
-            <span class="result__bland">BBQ </span>
-            <span class="result__menu">황금 올리브</span>
+            <span class="result__title">{{ result.title }}</span>
+            <span class="result__bland">{{ result.brandName }} </span>
+            <span class="result__menu">{{ result.name }}</span>
           </figcaption>
           <img
             class="respons"
-            src="@/assets/images/bbq_gold_olive.png"
-            alt="bbq 황금올리브 치킨"
+            :src="getImagePath(result.imageName)"
+            alt="음식 사진"
           />
         </figure>
         <p>
-          <span class="result__des"
-            >바삭한 식감과 부드럽게 퍼지는 육즙의 향연</span
+          <span class="result__des">{{ result.description }}</span>
+          <span class="result__res"
+            >“{{ result.brandName }} {{ result.name }}”</span
           >
-          <span class="result__res">“BBQ 황금 올리브 치킨”</span>을 추천합니다!
+          추천합니다!
         </p>
       </section>
       <div class="main__btn-list">
-        <button class="btn-list__back-btn" type="button">← 뒤로가기</button>
         <router-link :to="'/'">
           <button class="btn-list__replay-btn" type="button">다시하기</button>
         </router-link>
@@ -37,8 +37,25 @@
 import SmallLogo from "@/components/SmallLogo";
 
 export default {
+  data: () => ({
+    result: {
+      name: "",
+      title: "",
+      brandName: "",
+      imageName: "",
+      description: ""
+    }
+  }),
+  mounted() {
+    this.result = this.$route.params.result;
+  },
   components: {
     SmallLogo
+  },
+  methods: {
+    getImagePath(imageName) {
+      return require(`@/assets/images/${imageName}`);
+    }
   }
 };
 </script>
@@ -46,14 +63,14 @@ export default {
 <style scoped>
 @font-face {
   font-family: "DX상장체B";
-  src: url(../assets/font/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
+  src: url(../assets/fonts/DXSJB-KSCpc-EUC-H.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "상상토끼 정묵바위";
-  src: url(../assets/font/SSRock.ttf) format("truetype");
+  src: url(../assets/fonts/SSRock.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
