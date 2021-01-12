@@ -7,7 +7,7 @@
         <div class="progress-bar__line"></div>
         <img
           class="progress-bar__step"
-          src="@/assets/images/tray.png"
+          src="@/assets/images/views/tray.png"
           alt="지금의 단계"
         />
       </section>
@@ -16,13 +16,21 @@
         <p class="question-answer__question">{{ question.content }}</p>
         <ul class="question-answer__answer">
           <li>
-            <a @click="answerYes">
-              <img class="respons" src="@/assets/images/yes.png" alt="yes" />
+            <a @click="answer('/yes')">
+              <img
+                class="respons"
+                src="@/assets/images/views/yes.png"
+                alt="yes"
+              />
             </a>
           </li>
           <li>
-            <a>
-              <img class="respons" src="@/assets/images/no.png" alt="no" />
+            <a @click="answer('/no')">
+              <img
+                class="respons"
+                src="@/assets/images/views/no.png"
+                alt="no"
+              />
             </a>
           </li>
         </ul>
@@ -49,8 +57,9 @@ export default {
     SmallLogo
   },
   methods: {
-    answerYes() {
-      axios.get(this.requestUri + "/yes").then(res => {
+    answer(yesOrNo) {
+      axios.get(this.requestUri + yesOrNo).then(res => {
+          console.log(res.data)
         if (this.isResult(res)) {
           this.$router.push({
             name: "Result",

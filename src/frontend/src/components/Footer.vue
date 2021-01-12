@@ -4,7 +4,7 @@
       <div class="footer__brand-logo">
         <img
           class="respons"
-          src="@/assets/images/footer_logo.png"
+          src="@/assets/images/views/footer_logo.png"
           alt="음식 흥신소"
         />
       </div>

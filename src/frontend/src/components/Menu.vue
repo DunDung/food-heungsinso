@@ -19,12 +19,12 @@ export default {
   data: () => ({
     menus: [
       {
-        imagePath: require("@/assets/images/chicken.png"),
+        imagePath: require("@/assets/images/views/chicken.png"),
         name: "치킨",
         class: "chickens"
       },
       {
-        imagePath: require("@/assets/images/pizza.png"),
+        imagePath: require("@/assets/images/views/pizza.png"),
         name: "피자",
         class: "pizzas"
       }

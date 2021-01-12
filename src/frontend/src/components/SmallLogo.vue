@@ -1,13 +1,13 @@
 <template>
   <header class="header">
     <h1 class="header__brand-logo">
-        <router-link to="/">
-          <img
-            class="respons"
-            src="@/assets/images/small_logo.png"
-            alt="음식 흥신소"
-          />
-        </router-link>
+      <router-link to="/">
+        <img
+          class="respons"
+          src="@/assets/images/views/small_logo.png"
+          alt="음식 흥신소"
+        />
+      </router-link>
     </h1>
   </header>
 </template>

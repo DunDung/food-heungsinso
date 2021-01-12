@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     getImagePath(imageName) {
-      return require(`@/assets/images/${imageName}`);
+      return require(`@/assets/images/chickens/${imageName}`);
     }
   }
 };

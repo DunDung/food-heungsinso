@@ -5,7 +5,7 @@
         <h1 class="header__brand-logo">
           <img
             class="respons"
-            src="@/assets/images/header_logo.png"
+            src="@/assets/images/views/header_logo.png"
             alt="음식 흥신소"
           />
         </h1>
