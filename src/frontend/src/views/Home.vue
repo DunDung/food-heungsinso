@@ -9,6 +9,10 @@
             alt="음식 흥신소"
           />
         </h1>
+        <v-alert type="warning" v-if="isInternetExplorer">
+          "Internet Explorer는 디자인이 깨질 수 있어요 ㅠㅠ<br />
+          크롬이나 네이버 웨일을 사용하면 더 예쁘게 이용 가능합니다!"
+        </v-alert>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
           <p>
@@ -26,9 +30,20 @@
 <script>
 import Menu from "@/components/Menu";
 export default {
-  data: () => ({}),
+  data: () => ({
+    isInternetExplorer: false
+  }),
   components: {
     Menu
+  },
+  mounted() {
+    const agent = navigator.userAgent.toLowerCase();
+    if (
+      (navigator.appName == "Netscape" && agent.indexOf("trident") != -1) ||
+      agent.indexOf("msie") != -1
+    ) {
+      this.isInternetExplorer = true;
+    }
   }
 };
 </script>
