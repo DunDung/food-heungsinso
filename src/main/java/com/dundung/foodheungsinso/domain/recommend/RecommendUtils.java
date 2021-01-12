@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class RecommendUtils {
 
-    public Question respond(Question question, Answer answer) {
-        if (answer == Answer.YES) {
+    public static Recommend getNextRecommend(Question question, Answers answers) {
+        if (answers == Answers.YES) {
             return question.answerYes();
         }
         return question.answerNo();
     }
-
 }

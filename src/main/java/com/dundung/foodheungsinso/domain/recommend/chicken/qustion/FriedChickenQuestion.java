@@ -2,20 +2,20 @@ package com.dundung.foodheungsinso.domain.recommend.chicken.qustion;
 
 import com.dundung.foodheungsinso.domain.recommend.Question;
 import com.dundung.foodheungsinso.domain.recommend.Recommend;
-import com.dundung.foodheungsinso.domain.recommend.chicken.result.Chickens;
 
-public class ALittleSpicyQuestion extends Question {
+public class FriedChickenQuestion extends Question {
 
-    private static final String CONTENT = "좀 매콤하면 더 좋아.";
+    private static final String CONTENT = "후라이드 치킨만 먹어요.";
+    private static final Recommend YES_REPLY_QUESTION = new ALittleSpicyQuestion();
 
     @Override
     public Recommend answerYes() {
-        return Chickens.BHC_HOT_FRIED;
+        return YES_REPLY_QUESTION;
     }
 
     @Override
     public Recommend answerNo() {
-        return Chickens.BBQ_GOLD_OLIVE;
+        return null;
     }
 
     @Override

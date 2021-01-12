@@ -1,5 +1,5 @@
 package com.dundung.foodheungsinso.domain.recommend;
 
-public enum Answer {
+public enum Answers {
     YES, NO
 }

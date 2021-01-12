@@ -1,21 +1,36 @@
 package com.dundung.foodheungsinso.domain.recommend.api;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
+import com.dundung.foodheungsinso.domain.recommend.Answers;
+import com.dundung.foodheungsinso.domain.recommend.Recommend;
+import com.dundung.foodheungsinso.domain.recommend.pizza.question.TempQuestion;
+import com.dundung.foodheungsinso.domain.recommend.service.RecommendService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
+
 @RestController
-@RequestMapping("recommends")
+@RequiredArgsConstructor
+@RequestMapping("/recommends")
 public class RecommendRestController {
 
-    @DeleteMapping
-    public void completeRecommend() {
-        System.out.println("끝");
+    private final RecommendService recommendService;
+
+    @GetMapping("/chickens")
+    public Recommend startChickenRecommend(HttpSession httpSession) {
+        return recommendService.startChickenRecommend(httpSession);
     }
 
-    @GetMapping
-    public void start() {
-        System.out.println("시작");
+    @GetMapping("/chickens/{answer}")
+    public Recommend respondNextRecommended(@PathVariable Answers answer, HttpSession httpSession) {
+        return recommendService.nextRecommend(answer, httpSession);
+    }
+
+    @GetMapping("/pizzas")
+    public Recommend startPizzaRecommend() {
+        return new TempQuestion();
     }
 }

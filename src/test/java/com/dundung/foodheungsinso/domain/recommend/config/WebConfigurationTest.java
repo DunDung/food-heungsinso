@@ -1,8 +1,8 @@
 package com.dundung.foodheungsinso.domain.recommend.config;
 
 import com.dundung.foodheungsinso.domain.recommend.Answers;
-import com.dundung.foodheungsinso.domain.recommend.chicken.api.RecommendRestController;
-import com.dundung.foodheungsinso.domain.recommend.chicken.service.RecommendService;
+import com.dundung.foodheungsinso.domain.recommend.api.RecommendRestController;
+import com.dundung.foodheungsinso.domain.recommend.service.RecommendService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

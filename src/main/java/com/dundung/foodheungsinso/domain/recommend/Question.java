@@ -1,9 +1,9 @@
 package com.dundung.foodheungsinso.domain.recommend;
 
 public abstract class Question implements Recommend {
-    protected abstract Recommend answerYes();
+    public abstract Recommend answerYes();
 
-    protected abstract Recommend answerNo();
+    public abstract Recommend answerNo();
 
-    protected abstract String getContent();
+    public abstract String getContent();
 }
