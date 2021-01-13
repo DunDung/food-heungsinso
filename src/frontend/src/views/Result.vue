@@ -24,17 +24,14 @@
           추천합니다!
         </p>
       </section>
-      <div class="main__btn-list">
-        <router-link :to="'/'">
-          <button class="btn-list__replay-btn" type="button">다시하기</button>
-        </router-link>
-      </div>
+      <BackHomeBtn />
     </main>
   </v-main>
 </template>
 
 <script>
 import SmallLogo from "@/components/SmallLogo";
+import BackHomeBtn from "@/components/BackHomeBtn";
 
 export default {
   data: () => ({
@@ -50,11 +47,12 @@ export default {
     this.result = this.$route.params.result;
   },
   components: {
-    SmallLogo
+    SmallLogo,
+    BackHomeBtn
   },
   methods: {
     getImagePath(imageName) {
-      return require(`@/assets/images/chickens/${imageName}`);
+      return require(`@/assets/images/results/${imageName}`);
     }
   }
 };
@@ -141,40 +139,6 @@ export default {
   font-size: 2.3rem;
 }
 
-/* 메인-뒤로가기 버튼 */
-.main__btn-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.btn-list__back-btn,
-.btn-list__replay-btn {
-  display: inline-block;
-  width: 200px;
-  height: 50px;
-  margin-top: 40px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  color: #f4eee6;
-}
-
-.btn-list__back-btn {
-  background: #b73de6;
-}
-
-.btn-list__back-btn:hover {
-  border: 2px solid violet;
-}
-
-.btn-list__replay-btn {
-  background: #0a0426;
-}
-
-.btn-list__replay-btn:hover {
-  border: 2px solid #f4eee6;
-}
-
 @media screen and (max-width: 768px) {
   .main {
     width: 100%;
@@ -197,10 +161,6 @@ export default {
   }
   .result__res {
     font-size: 1.5rem;
-  }
-  .btn-list__back-btn,
-  .btn-list__replay-btn {
-    width: 140px;
   }
 }
 </style>

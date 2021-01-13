@@ -35,6 +35,7 @@
           </li>
         </ul>
       </section>
+    <BackHomeBtn/>
     </main>
   </v-main>
 </template>
@@ -42,6 +43,8 @@
 <script>
 import SmallLogo from "@/components/SmallLogo";
 import axios from "axios";
+import BackHomeBtn from "@/components/BackHomeBtn";
+
 export default {
   data: () => ({
     requestUri: "/recommends/",
@@ -54,20 +57,21 @@ export default {
     axios.get(this.requestUri).then(res => (this.question = res.data));
   },
   components: {
-    SmallLogo
+    SmallLogo,
+    BackHomeBtn
   },
   methods: {
     answer(yesOrNo) {
       axios.get(this.requestUri + yesOrNo).then(res => {
-          console.log(res.data)
         if (this.isResult(res)) {
           this.$router.push({
             name: "Result",
             params: { result: res.data },
             props: true
           });
+        } else {
+          this.question = res.data;
         }
-        this.question = res.data;
       });
     },
     isResult(response) {
