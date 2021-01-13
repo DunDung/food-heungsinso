@@ -35,7 +35,7 @@
           </li>
         </ul>
       </section>
-    <BackHomeBtn/>
+      <BackHomeBtn />
     </main>
   </v-main>
 </template>
@@ -126,7 +126,7 @@ export default {
 
 .question-answer__question {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-family: "DX상장체B", sans-serif;
 }
 

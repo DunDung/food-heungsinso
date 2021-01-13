@@ -1,7 +1,9 @@
 <template>
   <div class="main__btn-list">
     <router-link :to="'/'">
-      <button class="btn-list__replay-btn" type="button"><v-icon color="white">mdi-home</v-icon> 홈으로</button>
+      <button class="btn-list__replay-btn" type="button">
+        <v-icon color="white">mdi-home</v-icon> 홈으로
+      </button>
     </router-link>
   </div>
 </template>

@@ -3,11 +3,13 @@
     <div class="app-container">
       <header class="header">
         <h1 class="header__brand-logo">
-          <img
-            class="respons"
-            src="@/assets/images/views/header_logo.png"
-            alt="음식 흥신소"
-          />
+          <a href="/">
+            <img
+              class="respons"
+              src="@/assets/images/views/header_logo.png"
+              alt="음식 흥신소"
+            />
+          </a>
         </h1>
         <v-alert type="warning" v-if="isInternetExplorer">
           "Internet Explorer는 디자인이 깨질 수 있어요 ㅠㅠ<br />

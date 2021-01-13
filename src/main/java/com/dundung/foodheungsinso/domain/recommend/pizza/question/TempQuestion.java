@@ -16,6 +16,6 @@ public class TempQuestion extends Question {
 
     @Override
     public String getContent() {
-        return "개발 예정임니다 ㅎㅎ";
+        return "개발 예정임니다ㅎㅎ";
     }
 }
