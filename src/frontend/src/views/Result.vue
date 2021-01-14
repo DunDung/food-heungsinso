@@ -16,7 +16,7 @@
             alt="음식 사진"
           />
         </figure>
-        <p>
+        <p class="result_information">
           <span class="result__des">{{ result.description }}</span>
           <span class="result__res"
             >“{{ result.brandName }} {{ result.name }}”</span
@@ -24,14 +24,14 @@
           추천합니다!
         </p>
       </section>
-      <BackHomeBtn />
+      <BottomBtn />
     </main>
   </v-main>
 </template>
 
 <script>
 import SmallLogo from "@/components/SmallLogo";
-import BackHomeBtn from "@/components/BackHomeBtn";
+import BottomBtn from "@/components/BottomBtn";
 
 export default {
   data: () => ({
@@ -48,7 +48,7 @@ export default {
   },
   components: {
     SmallLogo,
-    BackHomeBtn
+    BottomBtn
   },
   methods: {
     getImagePath(imageName) {
@@ -78,7 +78,7 @@ export default {
   width: 550px;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 /* 메인-추천메뉴 */
@@ -134,9 +134,15 @@ export default {
 }
 .result__des {
   display: block;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 .result__res {
   font-size: 2.3rem;
+}
+
+.result_information {
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 768px) {

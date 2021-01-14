@@ -1,6 +1,6 @@
 <template>
   <v-app id="base">
-    <v-main id="app-main">
+    <v-main>
       <router-view></router-view>
       <Footer />
     </v-main>

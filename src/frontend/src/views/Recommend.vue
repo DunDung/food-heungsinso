@@ -35,7 +35,6 @@
           </li>
         </ul>
       </section>
-      <BackHomeBtn />
     </main>
   </v-main>
 </template>
@@ -43,7 +42,6 @@
 <script>
 import SmallLogo from "@/components/SmallLogo";
 import axios from "axios";
-import BackHomeBtn from "@/components/BackHomeBtn";
 
 export default {
   data: () => ({
@@ -58,7 +56,6 @@ export default {
   },
   components: {
     SmallLogo,
-    BackHomeBtn
   },
   methods: {
     answer(yesOrNo) {
@@ -98,7 +95,7 @@ export default {
   width: 550px;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 /* 메인-프로그래스 바 */
@@ -157,23 +154,6 @@ export default {
   height: 200px;
 }
 
-/* 메인-뒤로가기 버튼 */
-.main__back-btn {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-  margin-top: 70px;
-  background: #b73de6;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  color: #f4eee6;
-}
-
-.main__back-btn:hover {
-  border: 2px solid violet;
-}
-
 @media screen and (max-width: 768px) {
   .main {
     width: 100%;
@@ -191,6 +171,10 @@ export default {
     width: 150px;
     height: 150px;
     line-height: 5.5;
+  }
+
+  .question-answer__answer li:hover {
+    border: 1px solid black;
   }
 }
 </style>

@@ -39,8 +39,7 @@ export default {
 .main {
   width: 550px;
   margin: 0 auto;
-  /* TODO: padding-bottom: 30px; */
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 .main h2 {

@@ -5,6 +5,11 @@
         <v-icon color="white">mdi-home</v-icon> 홈으로
       </button>
     </router-link>
+    <a href="https://forms.gle/u19RCjsEtiN64Sa66" target="_blank">
+      <button class="btn-list__replay-btn" type="button">
+        <v-icon color="white">mdi-home</v-icon> 건의사항
+      </button>
+    </a>
   </div>
 </template>
 
@@ -27,6 +32,8 @@
 }
 
 .btn-list__replay-btn {
+  font-family: "DX상장체B", sans-serif;
+  font-size: 1.2rem;
   background: #0a0426;
 }
 
