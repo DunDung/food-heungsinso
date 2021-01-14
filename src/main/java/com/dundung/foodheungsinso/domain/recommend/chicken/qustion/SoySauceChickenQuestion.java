@@ -3,18 +3,18 @@ package com.dundung.foodheungsinso.domain.recommend.chicken.qustion;
 import com.dundung.foodheungsinso.domain.recommend.Question;
 import com.dundung.foodheungsinso.domain.recommend.Recommend;
 
-public class FriedChickenQuestion extends Question {
+public class SoySauceChickenQuestion extends Question {
 
-    private static final String CONTENT = "난 후라이드 치킨만 먹어.";
+    private static final String CONTENT = "간장 치킨 좋아해?";
 
     @Override
     public Recommend answerYes() {
-        return new ALittleSpicyQuestion();
+        return new AntiSpicyChickenQuestion();
     }
 
     @Override
     public Recommend answerNo() {
-        return new RedSeasonedChickenQuestion();
+        return new RoastChickenQuestion();
     }
 
     @Override

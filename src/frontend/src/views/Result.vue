@@ -107,14 +107,14 @@ export default {
 
 .result__bland {
   line-height: 1.1;
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: "상상토끼 정묵바위", sans-serif;
   color: #b70000;
 }
 
 .result__menu {
   line-height: 1.1;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: "상상토끼 정묵바위", sans-serif;
   color: #e9b412;
 }
