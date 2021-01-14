@@ -40,11 +40,6 @@ export default {
   color: #181818;
 }
 
-/* 루트 요소의 기본 글자크기 설정 */
-html {
-  font-size: 10px;
-}
-
 /* 기본 박스사이징 설정 */
 body,
 body *,
