@@ -55,24 +55,25 @@ export default {
     axios.get(this.requestUri).then(res => (this.question = res.data));
   },
   components: {
-    SmallLogo,
+    SmallLogo
   },
   methods: {
     answer(yesOrNo) {
-      axios.get(this.requestUri + yesOrNo).then(res => {
-        if (this.isResult(res)) {
+      axios.get(this.requestUri + yesOrNo).then(response => {
+        const recommended = response.data;
+        if (this.isResult(recommended)) {
           this.$router.push({
             name: "Result",
-            params: { result: res.data },
+            params: { result: recommended },
             props: true
           });
         } else {
-          this.question = res.data;
+          this.question = recommended;
         }
       });
     },
-    isResult(response) {
-      if (response.data.name) {
+    isResult(recommended) {
+      if (recommended.name && recommended.brandName && recommended.title) {
         return true;
       }
       return false;

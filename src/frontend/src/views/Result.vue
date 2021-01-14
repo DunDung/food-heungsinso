@@ -12,15 +12,15 @@
           </figcaption>
           <img
             class="respons"
-            :src="getImagePath(result.imageName)"
+            :src="result.imageName"
             alt="음식 사진"
           />
         </figure>
         <p class="result_information">
           <span class="result__des">{{ result.description }}</span>
-          <span class="result__res"
-            >“{{ result.brandName }} {{ result.name }}”</span
-          >
+          <span class="result__res">
+            “{{ result.brandName }} {{ result.name }}”
+          </span>
           추천합니다!
         </p>
       </section>
@@ -45,16 +45,13 @@ export default {
   }),
   mounted() {
     this.result = this.$route.params.result;
+    this.result.imageName = require("@/assets/images/results/" + this.result.imageName);
   },
   components: {
     SmallLogo,
     BottomBtn
   },
-  methods: {
-    getImagePath(imageName) {
-      return require(`@/assets/images/results/${imageName}`);
-    }
-  }
+
 };
 </script>
 
