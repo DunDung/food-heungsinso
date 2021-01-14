@@ -16,7 +16,7 @@ public enum FriedChickens {
             "황금 올리브",
             "후라이드의 왕",
             "BBQ",
-            "더 물어볼 필요 없습니다. 후라이드의 왕 황금 올리브 드시면. 다른 후라이드는 못 먹어요.",
+            "더 물어볼 필요 없습니다. 후라이드의 왕 황금 올리브 드시면 다른 후라이드는 못 먹어요.",
             "bbq_gold_olive.jpg"));
 
     private final Chicken chicken;
