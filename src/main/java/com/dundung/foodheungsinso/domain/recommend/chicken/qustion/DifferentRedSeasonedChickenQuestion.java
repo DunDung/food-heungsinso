@@ -6,7 +6,7 @@ import com.dundung.foodheungsinso.domain.recommend.chicken.result.SeasonedChicke
 
 public class DifferentRedSeasonedChickenQuestion extends Question {
 
-    private static final String CONTENT = "빨간 양념치킨 이긴한데..조금 색다른걸 원해";
+    private static final String CONTENT = "양념 치킨 이긴한데..조금 색다른걸 원해";
 
 
     @Override
