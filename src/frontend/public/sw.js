@@ -1,5 +1,5 @@
 const cacheName = "cache";
-const precacheResources = ["/", "index.html", "favicon.ico"];
+const precacheResources = ["/", "index.html"];
 
 self.addEventListener("install", event => {
   console.log("Service worker install event!");

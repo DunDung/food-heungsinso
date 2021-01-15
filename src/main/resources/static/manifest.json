@@ -1,1 +1,1 @@
-{"name":"pwa tutorial","short_name":"pwa tutorial","theme_color":"#FF9800","icons":[],"start_url":".","display":"fullscreen","background_color":"#FF9800"}
+{"name":"pwa tutorial","short_name":"pwa tutorial","theme_color":"#FF9800","icons":[{"src":"./img/icons/icon-128.png","sizes":"128x128","type":"image/png"},{"src":"./img/icons/icon-256.png","sizes":"256x256","type":"image/png"},{"src":"./img/icons/icon-512.png","sizes":"512x512","type":"image/png"}],"start_url":".","display":"fullscreen","background_color":"#FF9800"}
