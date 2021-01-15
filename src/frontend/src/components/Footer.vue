@@ -9,7 +9,8 @@
         />
       </div>
       <address class="footer__address">
-        <span><b>GITHUB : </b>github.com/DunDung</span>
+        <v-icon color="white"> mdi-github</v-icon>
+        <span><b> GITHUB : </b>github.com/DunDung</span>
         <span class="address__divider" aria-hidden="true">ㅣ</span>
         <span>github.com/iamkjw77</span>
       </address>

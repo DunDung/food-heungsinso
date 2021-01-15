@@ -3,9 +3,9 @@ package com.dundung.foodheungsinso.domain.recommend.chicken.qustion;
 import com.dundung.foodheungsinso.domain.recommend.Question;
 import com.dundung.foodheungsinso.domain.recommend.Recommend;
 
-public class RedSeasonedChickenQuestion extends Question {
+public class SeasonedChickenQuestion extends Question {
 
-    private static final String CONTENT = "빨간색 양념 치킨이 제일 맛있어.";
+    private static final String CONTENT = "양념 치킨이 제일 맛있어.";
 
     @Override
     public Recommend answerYes() {

@@ -31,4 +31,7 @@ public class RecommendService {
         return nowQuestion;
     }
 
+    public void endChickenRecommend(HttpSession httpSession) {
+        httpSession.removeAttribute(QUESTION_KEY);
+    }
 }

@@ -10,11 +10,7 @@
             <span class="result__bland">{{ result.brandName }} </span>
             <span class="result__menu">{{ result.name }}</span>
           </figcaption>
-          <img
-            class="respons"
-            :src="result.imageName"
-            alt="음식 사진"
-          />
+          <img class="respons" :src="result.imageName" alt="음식 사진" />
         </figure>
         <p class="result_information">
           <span class="result__des">{{ result.description }}</span>
@@ -24,7 +20,7 @@
           추천합니다!
         </p>
       </section>
-      <BottomBtn />
+      <BottomBtn :isResult="true" />
     </main>
   </v-main>
 </template>
@@ -45,13 +41,13 @@ export default {
   }),
   mounted() {
     this.result = this.$route.params.result;
-    this.result.imageName = require("@/assets/images/results/" + this.result.imageName);
+    this.result.imageName = require("@/assets/images/results/" +
+      this.result.imageName);
   },
   components: {
     SmallLogo,
     BottomBtn
-  },
-
+  }
 };
 </script>
 

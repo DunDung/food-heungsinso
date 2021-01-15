@@ -5,13 +5,23 @@
         <v-icon color="white">mdi-home</v-icon> 홈으로
       </button>
     </router-link>
-    <a href="https://forms.gle/u19RCjsEtiN64Sa66" target="_blank">
+    <a
+      href="https://forms.gle/u19RCjsEtiN64Sa66"
+      target="_blank"
+      v-show="isResult"
+    >
       <button class="btn-list__replay-btn" type="button">
-        <v-icon color="white">mdi-home</v-icon> 건의사항
+        <v-icon color="white">mdi-mailbox-open-up</v-icon> 건의 사항
       </button>
     </a>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["isResult"]
+};
+</script>
 
 <style scoped>
 /* 메인-뒤로가기 버튼 */

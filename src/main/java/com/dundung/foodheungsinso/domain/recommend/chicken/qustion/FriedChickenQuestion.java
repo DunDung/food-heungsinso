@@ -14,7 +14,7 @@ public class FriedChickenQuestion extends Question {
 
     @Override
     public Recommend answerNo() {
-        return new RedSeasonedChickenQuestion();
+        return new SeasonedChickenQuestion();
     }
 
     @Override

@@ -35,12 +35,14 @@
           </li>
         </ul>
       </section>
+      <BottomBtn :isResult="false" />
     </main>
   </v-main>
 </template>
 
 <script>
 import SmallLogo from "@/components/SmallLogo";
+import BottomBtn from "@/components/BottomBtn";
 import axios from "axios";
 
 export default {
@@ -54,8 +56,12 @@ export default {
     this.requestUri += this.$route.params.menuName;
     axios.get(this.requestUri).then(res => (this.question = res.data));
   },
+  destroyed() {
+    axios.delete(this.requestUri);
+  },
   components: {
-    SmallLogo
+    SmallLogo,
+    BottomBtn
   },
   methods: {
     answer(yesOrNo) {
@@ -67,9 +73,8 @@ export default {
             params: { result: recommended },
             props: true
           });
-        } else {
-          this.question = recommended;
         }
+        this.question = recommended;
       });
     },
     isResult(recommended) {

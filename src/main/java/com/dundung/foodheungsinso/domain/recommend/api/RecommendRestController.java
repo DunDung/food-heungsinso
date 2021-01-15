@@ -6,6 +6,7 @@ import com.dundung.foodheungsinso.domain.recommend.pizza.question.TempQuestion;
 import com.dundung.foodheungsinso.domain.recommend.service.RecommendService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,13 @@ public class RecommendRestController {
     public ResponseEntity<Recommend> startChickenRecommend(HttpSession httpSession) {
         Recommend startChickenRecommend = recommendService.startChickenRecommend(httpSession);
         return ResponseEntity.ok(startChickenRecommend);
+    }
+
+    @DeleteMapping("/chickens")
+    public ResponseEntity<Void> endChickenRecommend(HttpSession httpSession) {
+        System.out.println("end");
+        recommendService.endChickenRecommend(httpSession);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/chickens/{answer}")
