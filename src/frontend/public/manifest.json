@@ -1,10 +1,11 @@
 {
-  "name": "pwa tutorial",
-  "short_name": "pwa tutorial",
+  "name": "음식 흥신소",
+  "short_name": "음식 흥신소",
   "start_url": ".",
   "display": "fullscreen",
   "theme_color": "#FF9800",
   "background_color": "#FF9800",
+  "description": "신개념 음식 추천 서비스",
   "icons": [
     {
       "src": "./img/icons/icon-128.png",
