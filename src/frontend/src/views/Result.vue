@@ -142,7 +142,6 @@ export default {
   .main {
     width: 100%;
   }
-
   .result__title {
     font-size: 3rem;
   }
@@ -157,6 +156,9 @@ export default {
   }
   .main__result p {
     font-size: 1.1rem;
+  }
+  .result__des {
+    margin: 0 25px;
   }
   .result__res {
     font-size: 1.5rem;

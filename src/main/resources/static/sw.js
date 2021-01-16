@@ -1,10 +1,11 @@
-const cacheName = "cache";
+const newCacheName = "cache1";
+const oldCacheName = "cache";
 const precacheResources = ["/", "index.html"];
 
 self.addEventListener("install", event => {
   console.log("Service worker install event!");
   event.waitUntil(
-    caches.open(cacheName).then(cache => {
+    caches.open(newCacheName).then(cache => {
       return cache.addAll(precacheResources);
     })
   );
@@ -13,14 +14,12 @@ self.addEventListener("install", event => {
 // 캐시 지워버림
 self.addEventListener('activate', (event) => {
     event.waitUntil(
-        caches.keys().then(function(cacheNames) {
+        caches.keys().then((keys) => {
             return Promise.all(
-                cacheNames.filter(function(cacheName) {
-                    // Return true if you want to remove this cache,
-                    // but remember that caches are shared across
-                    // the whole origin
-                }).map(function(cacheName) {
-                    return caches.delete(cacheName);
+                keys.filter(key => {
+                    return key === oldCacheName;
+                }).map((key) => {
+                    return caches.delete(key);
                 })
             );
         })
