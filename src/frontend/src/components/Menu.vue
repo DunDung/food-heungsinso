@@ -39,7 +39,7 @@ export default {
 .main {
   width: 550px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 200px;
 }
 
 .main h2 {

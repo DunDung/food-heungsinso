@@ -10,8 +10,8 @@
       </div>
       <address class="footer__address">
         <v-icon color="white"> mdi-github</v-icon>
-        <span><b> GITHUB : </b>github.com/DunDung</span>
-        <span class="address__divider" aria-hidden="true">ㅣ</span>
+        <span><b>GITHUB</b></span>
+        <span>github.com/DunDung</span>
         <span>github.com/iamkjw77</span>
       </address>
       <small class="footer__copyright"
@@ -39,12 +39,20 @@
   margin-bottom: 20px;
 }
 
+.footer__address span {
+  display: block;
+}
+
 .footer__address,
 .footer__copyright {
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   margin-bottom: 5px;
+}
+
+.footer__copyright {
+  font-size: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {

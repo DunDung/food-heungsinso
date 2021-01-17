@@ -99,9 +99,9 @@ export default {
 /* 메인 */
 .main {
   width: 550px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
 }
 
 /* 메인-프로그래스 바 */
@@ -170,7 +170,8 @@ export default {
   }
 
   .question-answer__question {
-    font-size: 2.7rem;
+    margin: 0 35px;
+    font-size: 1.8rem;
   }
 
   .question-answer__answer li {
