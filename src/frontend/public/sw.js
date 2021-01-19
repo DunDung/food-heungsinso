@@ -1,5 +1,5 @@
-const newCacheName = "cache1";
-const oldCacheName = "cache";
+const newCacheName = "2021-01-19";
+const oldCacheName = "cache1";
 const precacheResources = ["/", "index.html"];
 
 self.addEventListener("install", event => {
@@ -11,7 +11,7 @@ self.addEventListener("install", event => {
   );
 });
 
-// 캐시 지워버림
+
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((keys) => {
