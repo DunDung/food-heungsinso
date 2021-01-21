@@ -1,0 +1,5 @@
+server:
+  compression:
+    enabled: true
+    mime-types: text/html, text/css, text/javascript, application/javascript, application/json, image/png, image/jpeg
+    min-response-size: 2048
