@@ -13,12 +13,12 @@
         </h1>
         <v-alert type="warning" v-if="isInternetExplorer">
           "Internet Explorer는 디자인이 깨질 수 있어요 ㅠㅠ<br />
-          크롬이나 네이버 웨일을 사용하면 더 예쁘게 이용 가능합니다!"
+          크롬이나 네이버 웨일, 엣지를 사용하면 더 예쁘게 이용 가능합니다!"
         </v-alert>
         <article class="header__slogan">
           <h2 class="a11y-hidden">사이트 소개</h2>
           <p>
-            전국 프렌차이즈 메뉴 중 <br />
+            전국 프렌차이즈 메뉴 중<br />
             지금 끌리는 메뉴를 찾아드립니다.
           </p>
         </article>
@@ -30,6 +30,7 @@
 
 <script>
 import Menu from "@/components/Menu";
+
 export default {
   data: () => ({
     isInternetExplorer: false
@@ -37,6 +38,7 @@ export default {
   components: {
     Menu
   },
+
   mounted() {
     const agent = navigator.userAgent.toLowerCase();
     if (
