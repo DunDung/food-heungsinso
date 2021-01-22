@@ -3,7 +3,7 @@
     <h2>먹고 싶은 음식의 종류를 선택해주세요!</h2>
     <ul class="main__menu-list reset-list">
       <li class="menu-list__item" v-for="(menu, index) in menus" :key="index">
-        <router-link :to="'/recommend/' + menu.class">
+        <router-link :to="'/recommends/' + menu.class">
           <figure>
             <img :src="menu.imagePath" class="respons" />
             <figcaption>{{ menu.name }}</figcaption>

@@ -38,4 +38,5 @@ JAR_NAME=$(ls $REPOSITORY/ |grep 'food-heungsinso' | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 
-nohup java -jar $REPOSITORY/$JAR_NAME &
+nohup java -jar -DSpring.profiles.active=prod $REPOSITORY/$JAR_NAME 1> /dev/null 2>&1 &
+#nohup java -jar $REPOSITORY/$JAR_NAME &
