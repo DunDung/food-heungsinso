@@ -1,7 +1,7 @@
 {
-  "name": "음식 흥신소",
-  "short_name": "음식 흥신소",
-  "start_url": ".",
+  "name": "음식흥신소",
+  "short_name": "음식흥신소",
+  "start_url": "/",
   "display": "fullscreen",
   "theme_color": "#FF9800",
   "background_color": "#FF9800",
