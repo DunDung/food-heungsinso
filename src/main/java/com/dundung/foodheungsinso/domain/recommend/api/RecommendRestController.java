@@ -29,7 +29,6 @@ public class RecommendRestController {
 
     @DeleteMapping("/chickens")
     public ResponseEntity<Void> endChickenRecommend(HttpSession httpSession) {
-        System.out.println("end");
         recommendService.endChickenRecommend(httpSession);
         return ResponseEntity.noContent().build();
     }

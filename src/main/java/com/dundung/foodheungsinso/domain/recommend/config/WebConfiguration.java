@@ -15,10 +15,6 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
-    @Override
-    public void addFormatters(FormatterRegistry formatterRegistrar) {
-        formatterRegistrar.addConverter(new StringToAnswersConverter());
-    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
