@@ -39,6 +39,7 @@ node {
     npmWorkDir = file("./src/frontend")
     nodeModulesDir = file("./src/frontend")
 }
+task stage(dependsOn: [':subproject:stage'])
 
 task setUp(type: NpmTask) {
     description = "Install Node.js Package"
