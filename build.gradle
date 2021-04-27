@@ -40,14 +40,14 @@ node {
     nodeModulesDir = file("./src/frontend")
 }
 
-task setUp(type: NpmTask) {
-    description = "Install Node.js Package"
-    args = ['install']
-}
-
-task buildFrontEnd(type: NpmTask, dependsOn: setUp) {
-    description = "Build vue.js"
-    args = ['run', 'build']
-}
-
-processResources.dependsOn 'buildFrontEnd'
+//task setUp(type: NpmTask) {
+//    description = "Install Node.js Package"
+//    args = ['install']
+//}
+//
+//task buildFrontEnd(type: NpmTask, dependsOn: setUp) {
+//    description = "Build vue.js"
+//    args = ['run', 'build']
+//}
+//
+//processResources.dependsOn 'buildFrontEnd'
